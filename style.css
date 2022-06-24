@@ -1,0 +1,434 @@
+/* CSS file */
+body {
+  height: 100vh;
+  background-image: linear-gradient(#2382F2, #1B4679);
+}
+
+/* -------- Fish (general) -------- */
+.fish {
+  position: absolute;
+  transition: width 1s, height 1s;
+}
+
+.fish:hover {
+  height: 40%;
+  width: 20%;
+}
+
+.body {
+  position: absolute;
+  height: 75%;
+  width: 80%;
+  top: 10%;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.tail {
+  position: absolute;
+  height: 40%;
+  width: 40%;
+  border-radius: 0 50% 50% 0;
+  z-index: 0;
+}
+
+.top-tail {
+  top: 10%;
+  right: 3%;
+  transform: rotate(-20deg);
+  animation-name: top-tail;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes top-tail {
+  from {transform: rotate(-30deg);}
+   to  {transform: rotate(-10deg);}
+}
+
+.bottom-tail {
+  bottom: 10%;
+  right: 3%;
+  transform: rotate(20deg);
+  animation-name: bottom-tail;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes bottom-tail {
+  from {transform: rotate(30deg);}
+   to  {transform: rotate(10deg);}
+}
+
+.fin {
+  position: absolute;
+  height: 40%;
+  width: 30%;
+  border-radius: 35%;
+  z-index: 0;
+}
+
+.top-fin {
+  top: 0%;
+  right: 45%;
+  transform: rotate(-30deg);
+  animation-name: top-fin;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes top-fin {
+  from {transform: rotate(-30deg);}
+   to  {transform: rotate(-10deg);}
+}
+
+.bottom-fin {
+  bottom: 0%;
+  right: 45%;
+  transform: rotate(30deg);
+  animation-name: bottom-fin;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes bottom-fin {
+  from {transform: rotate(30deg);}
+   to  {transform: rotate(10deg);}
+}
+
+.side-fin {
+  z-index: 20;
+  height: 25%;
+  width: 25%;
+  border-radius: 30% 100% 20% 80%;
+  bottom: 35%;
+  right: 35%;
+  animation-name: side-fin;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes side-fin {
+  from {transform: rotate(-10deg);}
+   to  {transform: rotate(0deg);}
+}
+
+.eye {
+  position: absolute;
+  background-color: #ffffff;
+  height: 20%;
+  width: 10%;
+  left: 10%;
+  top: 25%;
+  border-radius: 100%;
+  z-index: 20;
+}
+
+.pupil {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 1);
+  height: 70%;
+  width: 70%;
+  left: 15%;
+  top: 15%;
+  border-radius: 100%;
+  z-index: 30;
+  animation-name: pupil;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pupil {
+  0%   {background-color: rgba(0, 0, 0, 1);}
+  25%  {background-color: rgba(0, 0, 0, 0.5);}
+  50%  {background-color: rgba(0, 0, 0, 0);}
+  75%  {background-color: rgba(0, 0, 0, 0.5);}
+  100% {background-color: rgba(0, 0, 0, 1);}
+}
+
+.glare {
+  position: absolute;
+  background-color: #ffffff;
+  height: 50%;
+  width: 50%;
+  right: 15%;
+  top: 0%;
+  border-radius: 100%;
+  z-index: 30;
+}
+
+.mouth {
+  position: absolute;
+  background-color: #2382F2;
+  height: 10%;
+  width: 6%;
+  bottom: 40%;
+  left: 0%;
+  border-radius: 100%;
+  z-index: 20;
+}
+
+/* -------- Fishes -------- */
+.fish1 {
+  height: 28%;
+  width: 15%;
+  top: 10%;
+  right: 0%;
+  animation-name: fish1;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  z-index: 40;
+}
+
+.fish1>.body {
+  background-color: #EE4C7C;
+}
+
+.fish1>.tail, .fish1>.fin {
+  background-color: #9A1750;
+}
+
+
+.fish2 {
+  height: 14%;
+  width: 8%;
+  top: 50%;
+  left: 0%;
+  z-index: 30;
+  transform: rotateY(150deg);
+  animation-name: fish2;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+.fish2>.body {
+  background-color: #FFB634;
+}
+
+.fish2>.tail, .fish2>.fin {
+  background-color: #EF8A1F;
+}
+
+.fish3 {
+  height: 14%;
+  width: 8%;
+  top: 30%;
+  left: 0%;
+  z-index: 5;
+  transform: rotateY(180deg);
+  animation-name: fish2;
+  animation-duration: 25s;
+  animation-iteration-count: infinite;
+}
+
+.fish3>.body {
+  background-color: #57BA98;
+}
+
+.fish3>.tail, .fish3>.fin {
+  background-color: #182628;
+}
+
+.fish4 {
+  z-index: 100;
+  height: 20%;
+  width: 10%;
+  top: 50%;
+  right: 0%;
+  animation-name: fish1;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+}
+
+.fish4>.body {
+  background-color: #98DBC6;
+}
+
+.fish4>.tail, .fish4>.fin {
+  background-color: #5BC8AC;
+}
+
+.fish5 {
+  z-index: 30;
+  height: 20%;
+  width: 10%;
+  top: 0%;
+  left: 0%;
+  transform: rotateY(180deg);
+  animation-name: fish2;
+  animation-duration: 17s;
+  animation-iteration-count: infinite;
+}
+
+.fish5>.body {
+  background-color: #98DBC6;
+}
+
+.fish5>.tail, .fish5>.fin {
+  background-color: #018786;
+}
+
+@keyframes fish1 {
+  from {rigth: 0%;}
+   to  {right: 100%;}
+}
+
+@keyframes fish2 {
+  from {left: 0%;}
+   to  {left: 100%;}
+}
+
+
+/* -------- Bubbles -------- */
+.bubble {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  bottom: 0;
+  border-radius: 100%;
+  z-index: 30;
+  background-color: rgba(255, 255, 255, 0.3);
+  animation-name: bubble;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+}
+
+.b1 {
+  animation-delay: 2s;
+}
+
+.b2 {
+  animation-delay: 4s;
+}
+
+.b3 {
+  animation-delay: 6s;
+}
+
+.b4 {
+  animation-delay: 8s;
+}
+
+@keyframes bubble {
+  from {bottom: 0%;}
+   to  {bottom: 100%;}
+}
+
+/* -------- Plants -------- */
+.seaweed {
+  position: absolute;
+  z-index: 10;
+  background-color: green;
+  width: 0.5%;
+  bottom: 0;
+  border-radius: 100% 100% 0 0;
+}
+
+.s0 {
+  height: 50%;
+  animation-name: s0;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes s0 {
+  0%   {transform: rotateZ(5deg);}
+  25%  {transform: rotateZ(-5deg);}
+  50%  {transform: rotateZ(5deg);}
+  75%  {transform: rotateZ(-5deg);}
+  100% {transform: rotateZ(5deg);}
+}
+
+.s1 {
+  height: 45%;
+  animation-name: s1;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes s1 {
+  0%   {transform: rotateZ(7deg);}
+  25%  {transform: rotateZ(-2deg);}
+  50%  {transform: rotateZ(8deg);}
+  75%  {transform: rotateZ(-10deg);}
+  100% {transform: rotateZ(3deg);}
+}
+
+.s2 {
+  height: 50%;
+  animation-name: s2;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes s2 {
+  0%   {transform: rotateZ(8deg);}
+  25%  {transform: rotateZ(-12deg);}
+  50%  {transform: rotateZ(4deg);}
+  75%  {transform: rotateZ(-10deg);}
+  100% {transform: rotateZ(8deg);}
+}
+
+.s3 {
+  height: 40%;
+  animation-name: s3;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes s3 {
+  0%   {transform: rotateZ(8deg);}
+  25%  {transform: rotateZ(-12deg);}
+  50%  {transform: rotateZ(4deg);}
+  75%  {transform: rotateZ(-10deg);}
+  100% {transform: rotateZ(8deg);}
+}
+
+
+/* -------- Rock -------- */
+.rock {
+  position: absolute;
+  bottom: 0;
+  z-index: 50;
+  background-color: #0C0F2C;
+}
+
+.r1 {
+  transform: rotate(-5deg);
+  width: 7%;
+  height: 30%;
+  border-radius: 70% 30% 40% 30%;
+}
+
+.r2 {
+  width: 5%;
+  height: 15%;
+  border-radius: 50% 70% 40% 30%;
+}
+
+.r3 {
+  width: 4%;
+  height: 14%;
+  transform: rotate(-10deg);
+  border-radius: 50% 70% 40% 30%;
+}
+
+.r4 {
+  width: 4%;
+  height: 10%;
+  bottom: 11%;
+  transform: rotate(10deg);
+  border-radius: 50% 70% 40% 30%;
+}
+
+.r5 {
+  width: 5%;
+  height: 20%;
+  border-radius: 50% 70% 40% 30%;
+}
